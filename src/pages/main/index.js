@@ -9,14 +9,12 @@ class Main extends Component {
     addFavoriteRequest: PropTypes.func.isRequired,
     favorites: PropTypes.shape({
       loading: PropTypes.bool,
-      data: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number,
-          name: PropTypes.string,
-          description: PropTypes.string,
-          url: PropTypes.string,
-        }),
-      ),
+      data: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        description: PropTypes.string,
+        url: PropTypes.string,
+      })),
       error: PropTypes.oneOfType([null, PropTypes.string]),
     }).isRequired,
   };
@@ -52,11 +50,7 @@ class Main extends Component {
           {this.props.favorites.data.map(favorite => (
             <li key={favorite.id}>
               <p>
-                <strong>{favorite.name}</strong>
-                {' '}
-(
-                {favorite.description}
-)
+                <strong>{favorite.name}</strong> ({favorite.description})
               </p>
               <a href={favorite.url}>Github</a>
             </li>

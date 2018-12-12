@@ -5,12 +5,7 @@ import { connect } from 'react-redux';
 const Footer = ({ count }) => (
   <Fragment>
     <p>
-      Você tem
-      {' '}
-      <span>
-        {count}
-        {' '}
-      </span>
+      Você tem <span>{count} </span>
       favoritos.
     </p>
   </Fragment>
