@@ -11,7 +11,7 @@ favoritos.
   </p>
 );
 
-Footer.prototype = {
+Footer.propTypes = {
   count: propTypes.number.isRequired,
 };
 
