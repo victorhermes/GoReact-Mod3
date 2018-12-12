@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Footer = ({ count }) => (
-  <p>
-    Você tem
-    {count}
-    {' '}
-favoritos.
-  </p>
+  <Fragment>
+    <p>
+      Você tem
+      {' '}
+      <span>
+        {count}
+        {' '}
+      </span>
+      favoritos.
+    </p>
+  </Fragment>
 );
 
 Footer.propTypes = {
