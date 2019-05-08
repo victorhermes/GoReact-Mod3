@@ -1,4 +1,4 @@
-# GoNode
+# GoReact
 
 <p>Módulo: <strong>GoReact</strong></p>
 <p>Parte: <strong>3ª Parte</strong></p>
